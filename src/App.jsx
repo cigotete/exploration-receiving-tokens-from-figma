@@ -1,10 +1,17 @@
+import {ConfigProvider, Space, Button} from 'antd';
 
-export function App() {
+import tokens from './tokens.json';
+
+export const App = () => {
 
   return (
-    <>
-    </>
-  )
-}
-
-export default App
+    <ConfigProvider
+    theme={tokens}
+  >
+    <Space>
+      <Button type="primary">Primary</Button>
+      <Button>Default</Button>
+    </Space>
+  </ConfigProvider>
+  );
+};
